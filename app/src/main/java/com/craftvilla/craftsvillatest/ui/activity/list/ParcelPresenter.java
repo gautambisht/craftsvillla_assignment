@@ -24,6 +24,12 @@ public class ParcelPresenter implements ParcelMvp.Presenter {
         this.view = checkNotNull(view);
     }
 
+    /**
+     *
+     * @param offset
+     * @param limit
+     * @param showProgress
+     */
     @Override
     public void loadData(final int offset, int limit, final boolean showProgress) {
         if (showProgress)

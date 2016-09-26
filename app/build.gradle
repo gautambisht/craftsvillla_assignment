@@ -17,8 +17,13 @@ android {
             manifestPlaceholders = [googleMapToken: "AIzaSyAGlvMKJDRtfkLwpjrghlrtyOPv8PEOmLU"]
         }
         release {
+            lintOptions {
+                disable 'MissingTranslation'
+            }
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
             buildConfigField "String", "BASE_URL", '"https://data.sfgov.org"'
-            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [googleMapToken: "AIzaSyAGlvMKJDRtfkLwpjrghlrtyOPv8PEOmLU"]
         }
